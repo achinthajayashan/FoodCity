@@ -1,0 +1,17 @@
+#searchbar{
+  height: 50px;
+  width: 300px;
+}
+
+#searchDiv{
+  width: 500px;
+}
+
+button{
+  width: 70px;
+  background-color: #ffa53b;
+}
+
+button:hover{
+  background-color: #0da487;
+}
