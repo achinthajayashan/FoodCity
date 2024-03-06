@@ -6,3 +6,9 @@
   background-color: rgba(169, 231, 217, 0.37);
   color: #0da487;
 }
+
+li:hover{
+  cursor: pointer;
+  color: #0da487;
+  transition: all 0.5s ease;
+}
