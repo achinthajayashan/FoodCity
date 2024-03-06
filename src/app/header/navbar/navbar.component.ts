@@ -5,7 +5,7 @@ import {TopNavbarComponent} from "../top-navbar/top-navbar.component";
   selector: 'app-navbar',
   standalone: true,
   imports: [
-    TopNavbarComponent
+
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
