@@ -1,0 +1,14 @@
+<main class="container">
+  <h4 class="text-center mt-5 mb-4">All Products</h4>
+
+  <div class="row column-gap-3 row-gap-3 justify-content-center">
+    <div class="col-2 rounded d-flex flex-column justify-content-center align-items-center border" *ngFor="let item of items">
+      <img src="assets/{{item.image}}" width="120">
+      <h5>{{item.name}}</h5>
+      <p>{{item.weight}}</p>
+      <h5 class="text-danger">{{item.price}}</h5>
+      <button class="btn btn-success w-75 mb-4">Add To Cart</button>
+    </div>
+  </div>
+
+</main>
