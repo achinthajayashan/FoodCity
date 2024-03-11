@@ -52,10 +52,17 @@
       <p>Don't miss this opportunity at a special discount just for this week</p>
 
       <div class="d-flex justify-content-between">
-        <div class="item me-2"></div>
-        <div class="item me-2"></div>
-        <div class="item me-2"></div>
-        <div class="item"></div>
+        <div class="item me-2 rounded d-flex flex-column justify-content-center align-items-center" *ngFor="let item of meats">
+          <img src="assets/{{item.image}}" width="120">
+          <h5>{{item.name}}</h5>
+          <p>{{item.weight}}</p>
+          <h5 class="text-danger">{{item.price}}</h5>
+          <button class="btn btn-success w-75">Add To Cart</button>
+        </div>
+<!--        <div class="item me-2"></div>-->
+<!--        <div class="item me-2"></div>-->
+<!--        <div class="item me-2"></div>-->
+<!--        <div class="item"></div>-->
       </div>
 
 

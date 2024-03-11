@@ -26,4 +26,11 @@ export class HomeComponent {
     { id: 3, name: 'Pumpkin' , weight:'1KG' ,price:'Rs.120.00' ,image:'Pumpkin_3.png' },
     { id: 3, name: 'Strawberry' , weight:'1KG' ,price:'Rs.120.00' ,image:'Strawberry_1.png' },
   ];
+
+  meats = [
+    { id: 1, name: 'Fish' , weight:'1KG' ,price:'Rs.120.00' , image:'Sea_food_1.png'},
+    { id: 2, name: 'Cuttle fish' , weight:'1KG' ,price:'Rs.120.00' ,image:'Sea_food_3.png' },
+    { id: 3, name: 'Meat' , weight:'1KG' ,price:'Rs.120.00' ,image:'Sea_food_2.png' },
+    { id: 3, name: 'Meat' , weight:'1KG' ,price:'Rs.120.00' ,image:'Sea_food_4.png' },
+  ];
 }
