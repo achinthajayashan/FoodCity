@@ -23,10 +23,12 @@
 
       <div class="d-flex justify-content-between">
 
-        <div class="item me-2" *ngFor="let item of items">
-          <h1>{{item.name}}</h1>
-          <h1>{{item.weight}}</h1>
-          <h1>{{item.price}}</h1>
+        <div class="item me-2 rounded d-flex flex-column justify-content-center align-items-center" *ngFor="let item of items">
+          <img src="assets/{{item.image}}" width="120">
+          <h5>{{item.name}}</h5>
+          <p>{{item.weight}}</p>
+          <h5 class="text-danger">{{item.price}}</h5>
+          <button class="btn btn-success w-75">Add To Cart</button>
         </div>
 <!--        <div class="item me-2"></div>-->
 <!--        <div class="item me-2"></div>-->
