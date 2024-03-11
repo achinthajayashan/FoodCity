@@ -7,7 +7,7 @@
       <h5>{{item.name}}</h5>
       <p>{{item.weight}}</p>
       <h5 class="text-danger">{{item.price}}</h5>
-      <button class="btn btn-success w-75 mb-4">Add To Cart</button>
+      <button class="btn btn-success w-75 mb-4" (click)="addToCart(item)">Add To Cart</button>
     </div>
   </div>
 

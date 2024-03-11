@@ -1,16 +1,24 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {CartService} from "../cart.service";
+import {NgForOf} from "@angular/common";
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [],
-  template: `
-    <p>
-      cart works!
-    </p>
-  `,
+  imports: [
+    NgForOf
+  ],
+  templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
 })
-export class CartComponent {
+export class CartComponent implements OnInit {
+
+  cartItems: any[] = [];
+
+  constructor(private cartService: CartService) {}
+
+  ngOnInit(): void {
+    this.cartItems = this.cartService.getCartItems();
+  }
 
 }

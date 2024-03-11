@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {NgForOf} from "@angular/common";
+import {CartService} from "../cart.service";
 
 @Component({
   selector: 'app-home',
@@ -33,4 +34,13 @@ export class HomeComponent {
     { id: 3, name: 'Meat' , weight:'1KG' ,price:'Rs.120.00' ,image:'Sea_food_2.png' },
     { id: 3, name: 'Meat' , weight:'1KG' ,price:'Rs.120.00' ,image:'Sea_food_4.png' },
   ];
+
+  constructor(
+    private cartService: CartService
+  ) {}
+
+  addToCart(product: any): void {
+    this.cartService.addToCart(product);
+    alert("Item added successfully")
+  }
 }
