@@ -16,12 +16,13 @@ import {Subscription} from "rxjs";
 })
 export class NavbarComponent{
 
+  countNum: number = this.cartService.cartCount2()
+
   cartQuantityCount?= signal(this.cartService.cartCount2());
 
-  // countOFCart:number = signal(this.cartService.changeCartCount());
 
 
-  constructor(private cartService: CartService) {
+  constructor(protected cartService: CartService) {
     console.log(this.cartService.cartCount2());
   }
 

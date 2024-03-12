@@ -16,7 +16,7 @@
     <div class="d-flex">
       <img class="me-4" width="30" height="30" src="https://img.icons8.com/ios/50/like--v1.png" alt="like--v1"/>
       <img routerLink="/cart" class="me-4" width="30" height="30" src="https://img.icons8.com/parakeet-line/48/shopping-cart.png" alt="shopping-cart" ><span class="position-absolute z-3 bg-danger ms-5 text-white ps-1 pe-1 rounded">
-      {{cartQuantityCount}}</span><img/>
+      {{this.cartService.cartCount2()}}</span><img/>
       <img routerLink="/my-account" width="30" height="30" src="https://img.icons8.com/ios/50/user-male-circle--v1.png" alt="user-male-circle--v1"/>
     </div>
   </section>
