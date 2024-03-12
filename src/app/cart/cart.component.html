@@ -8,6 +8,8 @@
         <th>Product Name</th>
         <th>Product Weight</th>
         <th>Product Price</th>
+        <th>Total Price</th>
+
       </thead>
 
       <tbody>
@@ -19,7 +21,9 @@
           {{item.weight}}kg
           <button class="btn border ms-2" (click)="increaseQty(item.id)">+</button>
         </td>
-        <td>{{item.price}}</td>
+        <td>Rs.{{item.price}}</td>
+        <td>Rs.{{item.price*item.weight}}</td>
+        <td><button class="btn btn-close"></button></td>
       </tr>
       </tbody>
 
