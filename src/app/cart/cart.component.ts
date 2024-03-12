@@ -21,4 +21,6 @@ export class CartComponent implements OnInit {
     this.cartItems = this.cartService.getCartItems();
   }
 
+  subTotal = 2500.00
+
 }

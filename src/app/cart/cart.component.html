@@ -20,5 +20,34 @@
       </tbody>
 
     </table>
+
+    <div class="w-25 cart-total rounded p-4">
+
+      <h4 class="mb-5">Cart Total</h4>
+      <div class="w-100 d-flex justify-content-between border-bottom">
+        <p>SubTotal</p>
+        <p class="text-danger">Rs. {{subTotal}}</p>
+      </div>
+
+      <div class="w-100 d-flex justify-content-between border-bottom">
+        <p>Deliver Charge</p>
+        <p class=" ">Rs. {{subTotal}}</p>
+      </div>
+
+      <div class="w-100 d-flex justify-content-between border-bottom">
+        <p>Discounts</p>
+        <p class="">- Rs. {{subTotal}}</p>
+      </div>
+
+      <div class="w-100 d-flex justify-content-between mt-4 mb-4">
+        <h5>Total to Pay</h5>
+        <h5 class="text-success">Rs. {{subTotal}}</h5>
+      </div>
+
+      <button class="btn btn-danger w-100">Proceed to Checkout</button>
+      <button class="btn btn-dark w-100 mt-3">Return To Shop</button>
+
+
+    </div>
   </div>
 </main>
