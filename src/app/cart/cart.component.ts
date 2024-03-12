@@ -21,16 +21,28 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.cartItems = this.cartService.getCartItems();
+    this.getTotal();
   }
 
   subTotal = 2500.00;
 
   increaseQty(id:number): void {
     this.cartService.incremenetQty(id);
+    this.getTotal();
   }
 
   decreaseQty(id:number): void {
     this.cartService.decreaseQty(id);
+    this.getTotal();
+  }
+
+  removeFromCart(item: any): void {
+    this.cartService.removeFromCart(item);
+    this.getTotal();
+  }
+
+  getTotal(): number {
+    return this.cartService.getTotal();
   }
 
 

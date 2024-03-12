@@ -41,5 +41,19 @@ export class CartService {
     }
   }
 
+  removeFromCart(i: any): void {
+    this.cartItems = this.cartItems.filter(item => item.id!== i.id);
+    this.updateCartCount();
+    this.getCartItems();
+  }
+
+  getTotal(){
+    let total = 0;
+    this.cartItems.forEach(item => {
+      total += item.price * item.weight;
+    });
+    return total;
+  }
+
 
 }
