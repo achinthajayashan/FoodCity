@@ -38,7 +38,7 @@ export class CartComponent implements OnInit {
 
   removeFromCart(item: any): void {
     this.cartService.removeFromCart(item);
-    this.getTotal();
+    this.ngOnInit();
   }
 
   getTotal(): number {

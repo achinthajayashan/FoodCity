@@ -10,7 +10,7 @@ export class CartService {
 
   cartItemCount: number = 0;
 
-  cartCount2= signal(2)
+  cartCount2= signal(0);
 
   constructor() {}
 
