@@ -1,7 +1,8 @@
-import {Component, OnInit, signal} from '@angular/core';
+import {Component, OnInit, Signal, signal} from '@angular/core';
 import {TopNavbarComponent} from "../top-navbar/top-navbar.component";
 import {RouterLink} from "@angular/router";
 import {CartService} from "../../cart.service";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-navbar',
@@ -13,12 +14,20 @@ import {CartService} from "../../cart.service";
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent {
+export class NavbarComponent{
 
-  cartCount = signal(0);
+  cartQuantityCount?= signal(this.cartService.cartCount2());
+
+  // countOFCart:number = signal(this.cartService.changeCartCount());
+
+
   constructor(private cartService: CartService) {
-    this.cartCount.set(this.cartService.cartCount());
+    console.log(this.cartService.cartCount2());
   }
+
+  // ngOnInit() {
+  //   this.cartQuantityCount = this.cartService.cartItemCount;
+  // }
 
 
 }
