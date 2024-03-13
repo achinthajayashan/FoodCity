@@ -3,12 +3,14 @@ import {TopNavbarComponent} from "../top-navbar/top-navbar.component";
 import {RouterLink} from "@angular/router";
 import {CartService} from "../../cart.service";
 import {Subscription} from "rxjs";
+import {FormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   imports: [
-    RouterLink
+    RouterLink,
+    FormsModule
 
   ],
   templateUrl: './navbar.component.html',
@@ -29,6 +31,7 @@ export class NavbarComponent{
   // ngOnInit() {
   //   this.cartQuantityCount = this.cartService.cartItemCount;
   // }
+
 
 
 }
