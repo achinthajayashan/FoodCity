@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {NgForOf} from "@angular/common";
+import {NgForOf, NgIf} from "@angular/common";
 import {CartService} from "../cart.service";
 
 @Component({
@@ -33,8 +33,16 @@ export class ProductsComponent {
   ) {}
 
   addToCart(product: any): void {
-    this.cartService.addToCart(product);
-    alert("Item added successfully")
+    const existingItemIndex = this.cartService.cartItems.findIndex(item => item.id === product.id);
+
+    if (existingItemIndex !== -1) {
+      this.cartService.cartItems[existingItemIndex].weight++;
+      this.cartService.getCartItems();
+    } else {
+      this.cartService.addToCart(product);
+    }
+    // this.cartService.addToCart(product);
+    // alert("Item added successfully")
 
   }
 

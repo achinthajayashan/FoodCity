@@ -44,6 +44,7 @@ export class CartService {
   removeFromCart(i: any): void {
     this.cartItems = this.cartItems.filter(item => item.id!== i.id);
     this.getCartItems();
+    this.cartCount2.set(this.cartItems.length);
   }
 
   getTotal(){

@@ -40,9 +40,8 @@ export class CheckoutComponent {
       this.checkoutForm.invalid
     );
 
-    alert(
-      this.checkoutForm.value.email
-    )
+      alert("Order placed successfully");
+
 
     this.isSubmitted = true;
   }

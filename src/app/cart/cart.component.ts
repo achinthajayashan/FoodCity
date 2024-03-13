@@ -1,12 +1,14 @@
 import {Component, OnInit} from '@angular/core';
 import {CartService} from "../cart.service";
 import {NgForOf} from "@angular/common";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-cart',
   standalone: true,
   imports: [
-    NgForOf
+    NgForOf,
+    RouterLink
   ],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
@@ -44,6 +46,8 @@ export class CartComponent implements OnInit {
   getTotal(): number {
     return this.cartService.getTotal();
   }
+
+
 
 
 }
