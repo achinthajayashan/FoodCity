@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
 import {NgForOf, NgIf} from "@angular/common";
 import {CartService} from "../cart.service";
+import {FormsModule} from "@angular/forms";
+import {SearchFilterPipe} from "../search-filter.pipe";
 
 @Component({
   selector: 'app-products',
   standalone: true,
   imports: [
-    NgForOf
+    NgForOf,
+    FormsModule,
+    SearchFilterPipe
   ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
@@ -27,6 +31,7 @@ export class ProductsComponent {
     { id: 11, name: 'Meat' , weight:1 ,price:120.00 ,image:'Sea_food_2.png' },
     { id: 12, name: 'Meat' , weight:1 ,price:120.00 ,image:'Sea_food_4.png' },
   ];
+  searchTerm: any;
 
   constructor(
     private cartService: CartService
