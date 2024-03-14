@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 import {FormBuilder, ReactiveFormsModule, Validators} from "@angular/forms";
 import {NgIf} from "@angular/common";
+import {RouterLink, RouterOutlet} from "@angular/router";
+import {CartService} from "../cart.service";
 
 @Component({
   selector: 'app-checkout',
   standalone: true,
   imports: [
     NgIf,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterOutlet,
+    RouterLink
   ],
   templateUrl: './checkout.component.html',
   styleUrl: './checkout.component.css'
@@ -25,7 +29,7 @@ export class CheckoutComponent {
 
   isSubmitted = false;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder , protected cartService: CartService) {}
 
   // ngOnInit(): void {
   //   this.registerForm.get('roleId')?.valueChanges.subscribe((roleId) => {

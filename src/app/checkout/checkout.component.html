@@ -151,9 +151,22 @@
       >
     </div>
 
+    <div class="mt-4 d-flex justify-content-between">
+      <div>
+        <P class="mb-1">Total To Pay</P>
+        <h3 class="text-success mt-0">Rs. {{this.cartService.getTotal()}}</h3>
+      </div>
+
+      <div>
+        <p class="mb-1 text-end">* Cash On Deliver</p>
+        <p class="text-danger">* Ready Your Money When Deliver</p>
+      </div>
+    </div>
+
     <div class="mt-4">
       <button
         type="submit"
+        routerLink="/success"
         class="btn btn-success w-100"
         [disabled]="checkoutForm.invalid"
       >

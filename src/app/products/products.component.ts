@@ -1,5 +1,5 @@
 import {Component, signal} from '@angular/core';
-import {NgForOf, NgIf} from "@angular/common";
+import {NgForOf, NgIf, NgOptimizedImage} from "@angular/common";
 import {CartService} from "../cart.service";
 import {FormsModule} from "@angular/forms";
 import {SearchFilterPipe} from "../search-filter.pipe";
@@ -10,7 +10,8 @@ import {SearchFilterPipe} from "../search-filter.pipe";
   imports: [
     NgForOf,
     FormsModule,
-    SearchFilterPipe
+    SearchFilterPipe,
+    NgOptimizedImage
   ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'

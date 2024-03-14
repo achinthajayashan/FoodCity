@@ -5,9 +5,9 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <p>
-      offers works!
-    </p>
+    <h2 class="text-center mt-4">
+      There Are No Offers Available Right Now !
+    </h2>
   `,
   styleUrl: './offers.component.css'
 })
